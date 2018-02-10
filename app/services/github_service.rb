@@ -3,7 +3,7 @@ class GithubService
   attr_reader :access_token
 
   def initialize(access_hash = nil)
-    raise access_hash.inspect
+    raise access_hash["access_token"].inspect
     @access_token = access_hash["access_token"] if access_hash
   end
 
