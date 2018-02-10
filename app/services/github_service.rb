@@ -11,7 +11,6 @@ class GithubService
         {client_id: client_id, client_secret: client_secret, code: code},
         {'Accept' => 'application/json'}
     access_hash = JSON.parse(response.body)
-    raise access_hash.inspect
     @access_token = access_hash["access_token"]
   end
 
